@@ -1,6 +1,4 @@
-// This is how you can nest forEach loops
-
-var suits = ["Spades", "Clubs", "Hearts", "Diamonds"];
+var suits = ["spades", "clubs", "hearts", "diamonds"];
 var values= ["2","3","4","5","6","7","8","9","10", "Jack", "Queen", "King", "Ace"];
 var cards = [];
 
@@ -10,21 +8,44 @@ suits.forEach(function(suit){
   });
 
 });
+function filterItems(query) {
+  return cards.filter(function(el) {
+      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  })
+};
+
+var spades = filterItems('spades');
+console.log(spades);
+var clubs = filterItems('clubs');
+console.log(clubs);
+var hearts = filterItems('hearts');
+var diamonds = filterItems('diamonds');
+;
+
 var noComma = cards.join('\n');
-alert(noComma);
+
+
+
+
+
 
 
 $(document).ready(function() {
-  // $(".display").text(noComma);
+  cards.forEach(function(card){
+  //   if(filterItems("spades") === true) {
+  //     $("." + suits).text(spades);
+  //   } else if(filterItems("clubs") === true) {
+  //     $("." + suits).text(spades);
+  //   } else {
+  //     console.log("damn");
+  //   }
 
-  console.log(cards);
-
-
-  $(".display").text(cards);
-
-
-
-  });
+    $("." + card).text(spades)
+    $("." + card).text(clubs)
+    $("." + card).text(hearts)
+    $("." + card).text(diamonds);
+});
+});
 
 // Map functions
 // var values= ["2","3","4","5","6","7","8","9","10", "Jack", "Queen", "King", "Ace"];
