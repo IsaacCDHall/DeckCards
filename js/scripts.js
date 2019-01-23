@@ -31,7 +31,7 @@ var noComma = cards.join('\n');
 
 
 $(document).ready(function() {
-  cards.forEach(function(card){
+
   //   if(filterItems("spades") === true) {
   //     $("." + suits).text(spades);
   //   } else if(filterItems("clubs") === true) {
@@ -40,11 +40,11 @@ $(document).ready(function() {
   //     console.log("damn");
   //   }
 
-    $("." + card).text(spades)
-    $("." + card).text(clubs)
-    $("." + card).text(hearts)
-    $("." + card).text(diamonds);
-});
+    $(".spades").text(spades);
+    $(".clubs").text(clubs);
+    $(".hearts").text(hearts);
+    $(".diamonds").text(diamonds);
+
 });
 
 // Map functions
