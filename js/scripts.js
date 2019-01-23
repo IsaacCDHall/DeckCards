@@ -6,8 +6,8 @@ suits.forEach(function(suit){
   values.forEach(function(value){
     cards.push(" " + value + " of " + suit );
   });
-
 });
+
 function filterItems(query) {
   return cards.filter(function(el) {
       return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
@@ -20,15 +20,8 @@ var clubs = filterItems('clubs');
 console.log(clubs);
 var hearts = filterItems('hearts');
 var diamonds = filterItems('diamonds');
-;
-
 var noComma = cards.join('\n');
-
-
-
-
-
-
+alert(noComma)
 
 $(document).ready(function() {
 
