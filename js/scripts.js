@@ -1,6 +1,6 @@
-var suits = ["spades", "clubs", "hearts", "diamonds"];
-var values= ["2","3","4","5","6","7","8","9","10", "Jack", "Queen", "King", "Ace"];
-var cards = [];
+const suits = ["spades", "clubs", "hearts", "diamonds"];
+const values= ["2","3","4","5","6","7","8","9","10", "Jack", "Queen", "King", "Ace"];
+let cards = [];
 
 suits.forEach(function(suit){
   values.forEach(function(value){
@@ -11,20 +11,19 @@ suits.forEach(function(suit){
 function filterItems(query) {
   return cards.filter(function(el) {
       return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+  });
 };
 
-var spades = filterItems('spades');
-console.log(spades);
-var clubs = filterItems('clubs');
-console.log(clubs);
-var hearts = filterItems('hearts');
-var diamonds = filterItems('diamonds');
+
 var noComma = cards.join('\n');
-alert(noComma)
-
+alert(noComma);
 $(document).ready(function() {
-
+  suits.forEach(function(sweet){
+    $("." + sweet).text(filterItems(sweet));
+    $("." + sweet).text(filterItems(sweet));
+    $("." + sweet).text(filterItems(sweet));
+    $("." + sweet).text(filterItems(sweet));
+  });
   //   if(filterItems("spades") === true) {
   //     $("." + suits).text(spades);
   //   } else if(filterItems("clubs") === true) {
@@ -33,10 +32,6 @@ $(document).ready(function() {
   //     console.log("damn");
   //   }
 
-    $(".spades").text(spades);
-    $(".clubs").text(clubs);
-    $(".hearts").text(hearts);
-    $(".diamonds").text(diamonds);
 
 });
 
